@@ -33,11 +33,46 @@ This README provides:
 - Troubleshooting section
 - Future improvement ideas
 
-- 
+  
 ## Installation Guide 📥
+
+Usage Flow (3-Step Process)
+1️⃣ First: Capture Face Dataset
+Run to register new users and capture face samples:
+
+
+python face_dataset.py
+Enter User ID when prompted
+
+Face the camera - system will capture 30 samples
+
+Creates images in dataset/ folder (User.{ID}.{Count}.jpg)
+
+2️⃣ Second: Train the Model
+Run to process captured faces and train recognizer:
+
+
+python training.py
+Processes all images in dataset/
+
+Generates trainer.yml (trained model file)
+
+Wait for "X faces trained" confirmation
+
+3️⃣ Third: Run Recognition System
+Launch the attendance tracking interface:
+
+python Face_Recognition.py
+Detects faces in real-time
+
+Automatically records recognized users
+
+Displays confidence percentage
+
+Press ESC to exit 
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Anujknp1206/face-recognition-attendance.git
-cd face-recognition-attendance
+git clone https://github.com/Anujknp1206/Face-Recognition.git
+cd Face-Recognition
 
